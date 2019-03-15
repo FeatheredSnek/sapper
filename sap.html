@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700" rel="stylesheet">
+<link href="sap-style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload=play(9,9,10)>
+
+<div class="main">
+
+	<h1>
+		<span id="1" class="title">S</span><span id="2" class="title">a</span><span id="3" class="title txt-lightblue">p</span><span id="4" class="title">p</span><span id="5" class="title txt-orange">e</span><span id="6" class="title">r</span>
+	</h1>
+
+	<h2>
+		<div class="big-button main-menu pointer" id="new-game">New game</div>
+		<div class="big-button main-menu reset" id="reset">Reset</div>
+		<!-- <span class="menu" >New game</span>
+		<span>•</span>
+		<span class="menu" id="reset">Reset</span> -->
+	</h2>
+
+	<div id="sub-menu">
+		<div id="easy" class="big-button sub-menu" onclick="play(9,9,10)">Easy<br />(9x9)</div>
+		<div id="advanced" class="big-button sub-menu" onclick="play(15,15,35)">Advanced<br />(15x15)</div>
+		<div id="expert" class="big-button sub-menu" onclick="play(22,22,100)">Expert<br />(22x22)</div>
+		<div id="custom" class="big-button sub-menu not-clickable" >Custom:<br />
+			<div class="fields">
+				<p><input type="text" id="control-rows" label="rows" value="5" /></p>
+				<p><input type="text" id="control-cols" label="cols" value="5" /></p>
+				<p><input type="text" id="control-mines" label="mines" value="5" /></p>
+			</div>
+			<div class="labels">
+				<p>Rows</p>
+				<p>Columns</p>
+				<p>Mines</p>
+			</div>
+			<div class="custom-start pointer clear" onclick="play(userRows,userCols,userMines,true)">Custom<br />start</div>
+			<div id="custom-start-error" class="hidden">Error:<br />
+				<span id="error-messages"></span>
+			</div>
+		</div>
+	</div>
+
+	<div id="game-field" onload="" class="clear"></div>
+
+	<h3>
+	  <span>Mines: <span id="mines-counter">&nbsp;</span></span>
+		<span>•</span>
+	  <span>Flags: <span id="flags-counter">0</span></span>
+  </h3>
+
+	<h3 id="endgame">
+		<div class="big-button endgame-result hidden" id="win">Nice!</div>
+		<div class="big-button endgame-result hidden" id="lose">Pop'd!</div>
+	</h3>
+
+</div>
+
+<script src="sap-script.js"></script>
+<script src="sap-game.js"></script>
+<script src="sap-cell.js"></script>
+
+</body>
+</html>

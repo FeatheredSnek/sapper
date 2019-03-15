@@ -1,0 +1,267 @@
+body {
+  font-family: 'Source Code Pro', monospace;
+  color: #369;
+  background: #222;
+}
+
+/*text colors ---------------------------*/
+
+.txt-blue {
+  color: #369;
+}
+
+.txt-lightblue {
+  color: #7ad;
+}
+
+.txt-orange {
+  color: #d85;
+}
+
+.txt-animate {
+  color: #7ad !important;
+}
+
+/*menu ---------------------------------*/
+
+h1 {
+  font-size: 2em;
+  width: 200px;
+  margin: 30px auto;
+  text-align: center;
+  /*display: block;*/
+}
+
+.title {
+  cursor: pointer;
+  margin-left: 0.2em;
+}
+
+.title:hover {
+  color: #7ad;
+}
+
+h2 {
+  width: 360px;
+  margin: auto;
+  font-size: 1.2em;
+}
+
+.big-button {
+  width: 140px;
+  padding: 10px;
+  color: #ddd;
+  cursor: pointer;
+  border-radius: 6px;
+  text-align: center;
+  vertical-align: middle;
+  transition: background-color 0.1s;
+}
+
+.big-button:hover {
+  background-color: #7ad;
+}
+
+.main-menu {
+  float: left;
+  margin: 0 10px 30px 10px;
+  position: relative;
+  background: #369;
+}
+
+#reset:hover {
+  background: #d85;
+}
+
+#new-game:hover {
+  background: #7ad;
+}
+
+/*sub menu ------------------------------*/
+
+#sub-menu {
+  background-color: rgba(51,51,51,0.8);
+  border-radius: 6px;
+  width: 160px;
+  z-index: 1;
+  position: absolute;
+  left:50%;
+  margin: -6px 0 0 -100px;
+  padding: 20px;
+}
+
+.sub-menu {
+  background: #369;
+  margin: 0 0 10px 0;
+}
+
+.fields {
+  float: left;
+  margin: 6px 6px 0 10px;
+}
+
+.labels {
+  float: left;
+  margin: 6px 0 0 0;
+}
+
+input[type="text"] {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9em;
+  width: 30px;
+  height: 1.2em;
+  color: #ddd;
+  text-align: center;
+  border: 1px solid #7ad;
+  border-radius: 4px;
+  background-color: #369;
+  transition: background-color 0.1s;
+}
+
+input[type="text"]:focus   {
+  background-color: #7ad;
+}
+
+p {
+  height: 1.6em;
+  text-align: left;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.custom-start {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #7ad;
+  border-radius: 4px;
+  margin: 90px auto 10px auto;
+  padding: 10px;
+  width: 80px;
+  transition: background-color 0.1s;
+}
+
+.custom-start:hover {
+  background-color: #7ad;
+}
+
+#custom-start-error {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #d85;
+  margin: 10px auto 10px auto;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100px;
+}
+
+/*bottom text ---------------------------*/
+
+h3 {
+  text-align: center;
+  width: 360;
+  margin: 30px auto;
+  font-size: 1.2em;
+}
+
+#mines-counter {
+  color: #d85;
+}
+
+#flags-counter {
+  color: #7ad;
+}
+
+.endgame {
+  background: purple;
+  width: 300px;
+  margin: auto;
+}
+
+.endgame-result {
+  margin: auto;
+}
+
+#win {
+  background: #7ad;
+}
+
+#lose {
+  background: #d85;
+}
+
+/*game ---------------------------------*/
+
+#game-field {
+  margin: auto;
+  border-radius: 6px;
+  font-size: 1.2em;
+}
+
+.row {
+  height: 30px;
+}
+
+.cell {
+  float: left;
+  width: 26px;
+  height: 26px;
+  margin: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.unrevealed {
+  background: #369;
+}
+
+.revealed {
+  background: #ddd !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.flagged {
+  background: #7ad;
+}
+
+.mine {
+  color: #222;
+}
+
+.exploded {
+  background-color: #d85 !important;
+}
+
+/*helper classes -----------------------*/
+
+.clear {
+	clear:both;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.not-clickable {
+  cursor: default !important;
+}
+
+.not-clickable:hover {
+  background-color: #369 !important;
+}
+
+.bg-orange {
+  background-color: #d85 !important;
+}
+
+span {
+  transition: background-color 0.1s;
+}
